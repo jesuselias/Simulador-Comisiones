@@ -21,8 +21,14 @@ Para ejecutar el proyecto, sigue estos pasos:
         
 ```bash
 cd backend
+```
 
+```bash
 npm install
+```
+
+```bash
+npm run start
 ```
 
 ### Frontend
@@ -32,8 +38,14 @@ npm install
     *   Ejecuta el comando:
 ```bash
 cd frontend
+```
 
+```bash
 npm install
+```
+
+```bash
+npm run dev
 ```
 
 ## Tecnologías Utilizadas
@@ -57,7 +69,9 @@ Para ejecutar las pruebas unitarias en cada proyecto:
 
 ```bash
 cd backend
+```
 
+```bash
 npm test
 ```
 
@@ -65,7 +79,9 @@ npm test
 
 ```bash
 cd frontend
+```
 
+```bash
 npm test
 ```
 
