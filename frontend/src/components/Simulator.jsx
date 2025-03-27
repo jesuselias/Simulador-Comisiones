@@ -233,7 +233,7 @@ const Simulator = () => {
                <tbody>
                  <tr className="border border-gray-300">
                    <td className="px-4 py-2 font-semibold">Monto Capturado:</td>
-                   <td className="px-4 py-2">{paymentStatus.amountCaptured = 200}</td>
+                   <td className="px-4 py-2">{paymentStatus.amountCaptured}</td>
                  </tr>
                  <tr className="border border-gray-300">
                    <td className="px-4 py-2 font-semibold">Estado:</td>
