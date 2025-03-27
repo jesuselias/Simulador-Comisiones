@@ -1,9 +1,9 @@
 import axios from "axios";
+import { config } from '../config/config';
 
-const API_BASE_URL = "http://localhost:4000/api";
-const PAYMENT_API_URL = "https://my.disruptivepayments.io/api/payments";
-const CLIENT_API_KEY = "o0z8y85rjdx28iqef32f4mrl6e56b71742437588342";
+const { API_BASE_URL, PAYMENT_API_URL, CLIENT_API_KEY } = config;
 
+// Función para simular la comisión
 export const simulateCommission = async (capital, meses, tipoBeneficio) => {
   try {
     const response = await axios.post(`${API_BASE_URL}/simulate`, {
@@ -11,13 +11,14 @@ export const simulateCommission = async (capital, meses, tipoBeneficio) => {
       meses,
       tipoBeneficio,
     });
+    console.log("response.data", response.data);
     return response.data;
   } catch (error) {
-    console.error("Error al simular", error);
     throw error;
   }
 };
 
+// Función para generar el código QR
 export const generateQRCode = async (capital) => {
   try {
     const response = await axios.post(
@@ -37,11 +38,11 @@ export const generateQRCode = async (capital) => {
 
     return response.data.data;
   } catch (error) {
-    console.error("Error al generar el código QR", error);
     throw error;
   }
 };
 
+// Función para verificar el estado del pago
 export const checkPayment = async (network, address) => {
   try {
     const response = await axios.get(`${PAYMENT_API_URL}/status`, {
@@ -54,7 +55,6 @@ export const checkPayment = async (network, address) => {
 
     return response.data.data;
   } catch (error) {
-    console.error("Error al verificar el pago", error);
     throw error;
   }
 };

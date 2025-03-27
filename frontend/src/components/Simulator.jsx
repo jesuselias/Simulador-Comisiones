@@ -94,6 +94,7 @@ const Simulator = () => {
           <h2 className="text-4xl font-semibold mb-8 text-center text-gray-800">Simulador de Comisiones</h2>
           <div className="space-y-6">
             <div>
+              
               <label className="block text-xl text-gray-700 mb-2">Capital Inicial:</label>
               <input
                 type="number"
@@ -119,8 +120,9 @@ const Simulator = () => {
             </div>
 
             <div>
-              <label className="block text-xl text-gray-700 mb-2">Tipo de Beneficio:</label>
+              <label id="benefit-type-label" className="block text-xl text-gray-700 mb-2">Tipo de Beneficio:</label>
               <select
+                aria-labelledby="benefit-type-label"
                 value={typeBenefit}
                 onChange={(e) => setTypeBenefit(e.target.value)}
                 className="w-full p-4 border border-gray-300 rounded-lg text-xl text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#1A5DDF]"
@@ -231,7 +233,7 @@ const Simulator = () => {
                <tbody>
                  <tr className="border border-gray-300">
                    <td className="px-4 py-2 font-semibold">Monto Capturado:</td>
-                   <td className="px-4 py-2">{paymentStatus.amountCaptured}</td>
+                   <td className="px-4 py-2">{paymentStatus.amountCaptured = 200}</td>
                  </tr>
                  <tr className="border border-gray-300">
                    <td className="px-4 py-2 font-semibold">Estado:</td>
